@@ -1,0 +1,261 @@
+* {
+    -webkit-transition-duration: 250ms;
+    font-family: \5FAE\8F6F\96C5\9ED1, \9ED1\4F53, \6587\6CC9\9A7F\6B63\9ED1\4F53, \534E\6587\7EC6\9ED1, verdana, arial, helvetica, sans-serif;
+}
+
+body {
+    background-color:;
+    color: #000;
+}
+
+h2 {
+    -webkit-animation-name: bgt;
+    -webkit-animation-duration: 1s;
+}
+
+@-webkit-keyframes bgt {
+    0% {
+		background-color:#FFF;
+		}
+    50% {
+		background-color:#ccc;
+    }
+}
+body, p, ol, ul, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+pre {
+    background-color: #eee;
+    padding: 10px;
+    font-size: 11px;
+}
+
+div.field, div.actions {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 64px;
+    color: #000;
+}
+
+h2 {
+    -webkit-animation-name: shak;
+    -webkit-animation-duration: 1s;
+}
+
+@-webkit-keyframes shak {
+    0% {
+        opacity:0;
+        font-size:64px;
+		margin-top:-500px;
+     }
+    50% {
+        opacity:0.8;
+        font-size:64px;
+		margin-top:-10px;
+		color:#666;
+    }
+    75% {
+        opacity:1;
+		margin-top:0px;
+		color:#333;
+    }
+}
+
+form, dl {
+    -webkit-animation-name: dsp;
+    -webkit-animation-duration: 1s;
+}
+
+@-webkit-keyframes dsp {
+    0% {
+        opacity:0;
+     }
+    50% {
+        opacity:0;
+
+    }
+    75% {
+        opacity:0.5;
+    }    
+	100% {
+        opacity:1;
+    }
+}
+dl {
+    -webkit-animation-name: dsp2;
+    -webkit-animation-duration: 2s;
+}
+
+@-webkit-keyframes dsp2 {
+    0% {
+        opacity:0;
+     }
+    50% {
+        opacity:0;
+
+    }
+    80% {
+        opacity:0.5;
+    }    
+	100% {
+        opacity:1;
+    }
+}
+
+#notice {
+    color: green;
+}
+
+.field_with_errors {
+    padding: 2px;
+    background-color: red;
+    display: table;
+}
+
+#error {
+    background-color: #f0f0f0;
+    width: 500px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+#error_explanation {
+    width: 450px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+}
+
+#error_explanation ul li {
+    font-size: 12px;
+    list-style: square;
+}
+
+a {
+    color: #06c;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    margin-left: -5px;
+}
+
+a:hover {
+    color: #fff;
+    background-color: #d00;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+
+.main {
+    margin: 200px auto;
+    width: 750px;
+}
+
+.warning {
+    background: yellow;
+    padding: 5px 10px;
+}
+
+#url {
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#downloadBtn {
+    margin: 0 auto;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+}
+
+#downloadWrapper {
+    width: 688px;
+    padding: 10px;
+    background: #f6f6f6;
+    margin-top: 10px;
+}
+
+#downloadWrapper .tip {
+    color: #333;
+    font-weight: 600;
+    line-height: 2.0;
+}
+
+#downloadWrapper .fileName {
+    line-height: 20px;
+    color: #666;
+    line-height: 2.0;
+    text-decoration: none;
+    cursor: default;
+}
+
+#downloadWrapper .link {
+    color: #06c;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#downloadWrapper .link:hover {
+    color: #fff;
+}
+
+.ProgressBar {
+    position: relative;
+    padding: 1px;
+    border: 1px solid #B1D632;
+}
+
+.ProgressBar, .BarValue, .BarText {
+    width: 500px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.BarValue {
+    background: #B1D632;
+}
+
+.BarText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    line-height: 20px;
+}
+
+.history dt {
+    font-weight: bold;
+}
+
+.history dd {
+    margin: 5px 0;
+}

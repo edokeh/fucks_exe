@@ -1,0 +1,29 @@
+<%= form_for(@http_file) do |f| %>
+  <% if @http_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@http_file.errors.count, "error") %> prohibited this http_file from being saved:</h2>
+
+      <ul>
+      <% @http_file.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :filename %><br />
+    <%= f.text_field :filename %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br />
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :percent %><br />
+    <%= f.text_field :percent %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,41 @@
+<div class="main">
+  <!--[if IE]>
+  <div class="warning">郑重声明：本网站不保证功能在IE(尤其是IE6/7)下可以完整使用，建议换用chrome
+  </div>
+  <![endif]-->
+  <h2>在福克斯下载exe</h2>
+
+  <form action="/files/size" method="get" id="downloadForm">
+    <input type="text" name="url" size="50" id="url" placeholder="输入文件的url"/>
+    <input type="text" name="pcode" size="12" id="pcode"  placeholder="输入特权码" style="display:none" />
+    <input type="submit" value="给老子下！" id="downloadBtn" style="display:none"/>
+    <div id="error" style="display:none"></div>
+    <div id="downloadWrapper" style="display:none">
+        <div class="tip"></div>
+        <div class="ProgressBar">
+          <div class="BarValue" style="width:0">
+            <div class="BarText"></div>
+          </div>
+        </div>
+        <a class="fileName"></a>
+    </div>
+  </form>
+
+  <% unless @his_files.empty? %>
+  <dl class="history">
+    <dt>历史下载记录</dt>
+    <% @his_files.reverse.each do |file| %>
+    <dd><%= link_to file.filename, file %></dd>
+    <% end %>
+  </dl>
+  <% end %>
+</div>
+
+<%= content_for :js do %>
+    <% if @file %>
+    <script>
+        var downloading_file = <%=raw @json.to_json %> ;
+    </script>
+    <% end %>
+    <%= javascript_include_tag "home/show.js" %>
+<% end %>

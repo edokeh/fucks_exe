@@ -1,0 +1,53 @@
+<h1>后台管理</h1>
+<p style="color:green">
+<%=flash[:notice]%>
+</p>
+<%= link_to "清理", clean_admin_http_files_path, :method=>:post %>
+<%= link_to "生成特权码", admin_pcodes_path, :method=>:post %>
+<table border="1" cellspacing="0">
+  <summary>所有文件</summary>
+  <tr>
+    <th>文件名</th>
+    <th>文件大小</th>
+    <th>进度</th>
+    <th>创建时间</th>
+    <th>修改时间</th>
+    <th colspan="3">操作</th>
+  </tr>
+
+<% @files.reverse.each do |http_file| %>
+  <tr>
+    <td><%= http_file.filename %></td>
+    <td><%= number_to_human_size(http_file.size) %></td>
+    <td><%= http_file.percent %>%</td>
+    <td><%= http_file.created_at.strftime("%Y-%m-%d %H:%M:%I") %></td>
+    <td><%= http_file.updated_at.strftime("%Y-%m-%d %H:%M:%I") %></td>
+    <td><%= link_to '原始下载', http_file.url %></td>
+    <td><%= link_to '下载', http_file %></td>
+    <th><%= link_to '删除', [:admin,http_file], :method=>:delete %></th>
+  </tr>
+<% end %>
+</table>
+
+<br/>
+
+<table border="1" cellspacing="0">
+  <summary>特权码</summary>
+  <tr>
+    <th>特权码</th>
+    <th>使用次数</th>
+    <th>创建时间</th>
+    <th>修改时间</th>
+    <th colspan="3">操作</th>
+  </tr>
+
+<% @pcodes.each do |code| %>
+  <tr>
+    <td><%= code.code %></td>
+    <td><%= code.used_count %></td>
+    <td><%= code.created_at.strftime("%Y-%m-%d %H:%M:%I") %></td>
+    <td><%= code.updated_at.strftime("%Y-%m-%d %H:%M:%I") %></td>
+    <th><%= link_to '删除', [:admin, code], :method=>:delete %></th>
+  </tr>
+<% end %>
+</table>

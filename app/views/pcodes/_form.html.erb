@@ -1,0 +1,21 @@
+<%= form_for(@pcode) do |f| %>
+  <% if @pcode.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pcode.errors.count, "error") %> prohibited this pcode from being saved:</h2>
+
+      <ul>
+      <% @pcode.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :code %><br />
+    <%= f.text_field :code %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

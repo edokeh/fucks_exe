@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Filename:</b>
+  <%= @http_file.filename %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @http_file.size %>
+</p>
+
+<p>
+  <b>Percent:</b>
+  <%= @http_file.percent %>
+</p>
+
+
+<%= link_to 'Edit', edit_http_file_path(@http_file) %> |
+<%= link_to 'Back', http_files_path %>

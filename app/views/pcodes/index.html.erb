@@ -1,0 +1,23 @@
+<h1>Listing pcodes</h1>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pcodes.each do |pcode| %>
+  <tr>
+    <td><%= pcode.code %></td>
+    <td><%= link_to 'Show', pcode %></td>
+    <td><%= link_to 'Edit', edit_pcode_path(pcode) %></td>
+    <td><%= link_to 'Destroy', pcode, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pcode', new_pcode_path %>
