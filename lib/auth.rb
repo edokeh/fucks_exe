@@ -1,7 +1,7 @@
 #encoding:utf-8
 #权限相关
 module Auth
-  ADMIN = {"geliang"=>"wori"}
+  ADMIN = {"geliang"=>"wocao"}
 
   MAX_SIZE = 30.megabytes
 
